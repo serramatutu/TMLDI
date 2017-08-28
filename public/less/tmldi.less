@@ -1,0 +1,53 @@
+@import "variables";
+
+body {
+    font-family: Arvo, "Roboto Lt", "Segoe UI";
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+a {
+    text-decoration: none;
+
+    color: @link-color;
+
+    transition: color 0.25s ease;
+
+    &:hover{
+        color: @link-hover-color;
+    }
+}
+
+nav {
+    background-color: @nav-color;
+    &.navbar {
+        padding: 0 0 0 0;
+    }
+
+    .nav-item {
+        transition: background 0.5s ease;
+        background-image: linear-gradient(to bottom, @link-hover-background 50%, white 50%);
+        background-size: 100% 200%;
+        background-position: 0 100%;
+        &:hover {
+            background-position: 0 0;
+        }
+        padding: .5rem 1rem;
+    }
+    .navbar-brand {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        text-align: center;
+        margin:0 auto;
+    }
+    :not(.navbar-brand):not(.collapse) {
+        z-index: 1;
+    }
+}
+
+div.wallpaper {
+    margin: 0 0 0 0;
+    background-image: url('../img/campinas.jpg');
+    background-size: cover;
+}

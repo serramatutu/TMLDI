@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    nav(class="navbar navbar-toggleable-md navbar-light" role="navigation")
+        button(class="navbar-toggler navbar-toggler-right" type="button" 
+        data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" 
+        aria-label="Toggle navigation")
+            span(class="navbar-toggler-icon")
+        a(class="navbar-brand hidden-md-down ajax-load" href="/")
+            img(src="img/logo.png" width=30 alt="")
+        div(class="collapse navbar-collapse")
+            ul(class="nav navbar-nav navbar-left mr-auto")
+                li(class="nav-item")
+                    a(class="nav-link ajax-load" href="#sobre") Sobre o evento
+                li(class="nav-item")
+                    a(class="nav-link ajax-load" href="inscricao") Inscreva-se
+            ul(class="navbar-nav navbar-right")
+                li(class="nav-item")
+                    a(class="nav-link ajax-load" href="login") Login
+    div(id="ajaxbox")
+        div(class="container-fluid text-center wallpaper")
