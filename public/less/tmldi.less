@@ -9,24 +9,24 @@ body {
 a {
     text-decoration: none;
 
-    color: @link-color;
+    color: @color-primary-3;
 
     transition: color 0.25s ease;
 
     &:hover{
-        color: @link-hover-color;
+        color: @color-primary-4;
     }
 }
 
 nav {
-    background-color: @nav-color;
+    background-color: @color-primary-1;
     &.navbar {
         padding: 0 0 0 0;
     }
 
     .nav-item {
         transition: background 0.5s ease;
-        background-image: linear-gradient(to bottom, @link-hover-background 50%, white 50%);
+        background-image: linear-gradient(to bottom, @color-primary-2 50%, @color-primary-1 50%);
         background-size: 100% 200%;
         background-position: 0 100%;
         &:hover {
@@ -48,6 +48,23 @@ nav {
 
 div.wallpaper {
     margin: 0 0 0 0;
-    background-image: url('../img/campinas.jpg');
+    background-image: url('../img/campinas4.jpg');
     background-size: cover;
+}
+
+div#bemvindo {
+    height: 100%;
+    font-size: 80px;
+    color: red;
+}
+
+.jumbotron.section {
+    &:nth-of-type(even) {
+        background-color: @color-secondary-2-0;
+        color: @color-secondary-2-4;
+    }
+    &:nth-of-type(odd) {
+        background-color: @color-primary-0;
+        color: @color-primary-4;
+    }
 }

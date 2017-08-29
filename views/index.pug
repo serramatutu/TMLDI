@@ -1,22 +1,35 @@
 extends layout
 
-block content
-    nav(class="navbar navbar-toggleable-md navbar-light" role="navigation")
+block inserts
+    script(type="text/javascript" src="js/index.js")
+
+block navbar
+    nav(class="navbar fixed-top navbar-toggleable-md navbar-light" role="navigation")
         button(class="navbar-toggler navbar-toggler-right" type="button" 
-        data-toggle="collapse" data-target="#navbarSupportedContent" 
-        aria-controls="navbarSupportedContent" aria-expanded="false" 
-        aria-label="Toggle navigation")
+        data-toggle="collapse" aria-expanded="false" 
+        aria-label="Toggle navigation" aria-controls="navCollapse" data-target="#navCollapse")
             span(class="navbar-toggler-icon")
         a(class="navbar-brand hidden-md-down ajax-load" href="/")
             img(src="img/logo.png" width=30 alt="")
-        div(class="collapse navbar-collapse")
+        div(class="collapse navbar-collapse" id="navCollapse")
             ul(class="nav navbar-nav navbar-left mr-auto")
                 li(class="nav-item")
                     a(class="nav-link ajax-load" href="#sobre") Sobre o evento
                 li(class="nav-item")
                     a(class="nav-link ajax-load" href="inscricao") Inscreva-se
-            ul(class="navbar-nav navbar-right")
-                li(class="nav-item")
-                    a(class="nav-link ajax-load" href="login") Login
-    div(id="ajaxbox")
-        div(class="container-fluid text-center wallpaper")
+                    
+block ajaxbox
+    div(class="container-fluid text-center wallpaper")
+        div(class="row justify-content-center" id="bemvindo")
+            div(class="col align-self-center") Bem-vindo bem top aqui
+    
+    a(name="sobre")
+    div(class="jumbotron jumbotron-fluid section")
+        div(class="container")
+            h1(class="display-3") Sobre o TMLDI
+            p(class="lead") é bem bacana :D
+    div(class="container-fluid")
+        div(class="row justify-content-center")
+            div(class="col col-11"). 
+                O TMLDI, ou Treinamento Multidistrital de Líderes Distritais de Interact
+                . tem por objetivo capacitar os líderes distritais de Interact do Brasil afora.
