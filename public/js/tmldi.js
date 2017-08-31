@@ -1,5 +1,6 @@
 $(window).on('load resize', function() {
     $('.wallpaper').height($(window).height() - $('nav').outerHeight());
+    $('body').css('padding-top', $('nav').css('height'));
 });
 
 // FAZER AJAX AQUI :)
@@ -29,5 +30,20 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $('[name="' + anchor.substr(1) + '"]').offset().top
         }, 500);
+    });
+
+    // Para input[type='file']
+    $('.form-control-file').on('change', function(e) {
+        var siblingLabel = $(this).next();
+        var filename = 'Escolha um arquivo';
+        if (this.files && this.files.length > 0) {
+            filename = this.value.split( '\\' ).pop();
+            $(this).addClass('has-file');
+        }
+        else
+            $(this).removeClass('has-file');
+
+
+        $(siblingLabel).text(filename);
     });
 });

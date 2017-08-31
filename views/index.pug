@@ -4,14 +4,15 @@ block inserts
     script(type="text/javascript" src="js/index.js")
 
 block navbar
-    nav(class="navbar fixed-top navbar-toggleable-md navbar-light" role="navigation")
+    nav(class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse" role="navigation")
         button(class="navbar-toggler navbar-toggler-right" type="button" 
         data-toggle="collapse" aria-expanded="false" 
         aria-label="Toggle navigation" aria-controls="navCollapse" data-target="#navCollapse")
             span(class="navbar-toggler-icon")
-        a(class="navbar-brand hidden-md-down ajax-load" href="/")
-            img(src="img/logo.png" width=30 alt="")
         div(class="collapse navbar-collapse" id="navCollapse")
+            // hidden-md-down mx-auto
+            a(class="navbar-brand ajax-load" href="/")
+                img(src="img/logo.png" width=30 alt="")
             ul(class="nav navbar-nav navbar-left mr-auto")
                 li(class="nav-item")
                     a(class="nav-link ajax-load" href="#sobre") Sobre o evento

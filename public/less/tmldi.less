@@ -19,31 +19,43 @@ a {
 }
 
 nav {
-    background-color: @color-primary-1;
-    &.navbar {
+    // background-color: @color-primary-1;
+    &.navbar { // Vai cagar no padding
         padding: 0 0 0 0;
     }
 
     .nav-item {
         transition: background 0.5s ease;
-        background-image: linear-gradient(to bottom, @color-primary-2 50%, @color-primary-1 50%);
+        // Animação lecau
+        // background-image: linear-gradient(to bottom, @color-primary-2 50%, @color-primary-1 50%);
         background-size: 100% 200%;
         background-position: 0 100%;
         &:hover {
             background-position: 0 0;
         }
-        padding: .5rem 1rem;
+        padding: .7rem 1rem .7rem 1rem;
     }
     .navbar-brand {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        text-align: center;
-        margin:0 auto;
+        height: 100%;
+        align-self: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
-    :not(.navbar-brand):not(.collapse) {
-        z-index: 1;
-    }
+
+    // EM TESE É PRA ISSO FICAR NO CENTRO :(
+    // .navbar-brand {
+    //     &:only-child {
+    //         position: relative;
+    //     }
+    //     position: absolute;
+    //     width: 100%;
+    //     left: 0;
+    //     text-align: center;
+    //     margin:0 auto;
+    // }
+    // :not(.navbar-brand):not(.collapse) {
+    //     z-index: 1;
+    // }
 }
 
 div.wallpaper {
@@ -66,5 +78,61 @@ div#bemvindo {
     &:nth-of-type(odd) {
         background-color: @color-primary-0;
         color: @color-primary-4;
+    }
+}
+
+p.section {
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+// FORMS
+.form-control-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+
+    & + label {
+        border-radius: 15px;
+        padding: 5px 10px 5px 10px;
+        font-size: 1.25em;
+        font-weight: 700;
+        color: @color-primary-1;
+
+        background-size: 100% 200%;
+        background-position: 0 -100%;
+        transition: background 0.5s, color 0.5s;
+        background-image: linear-gradient(to bottom, @color-secondary-2-0 50%, @color-primary-0 50%);
+
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    &:focus + label {
+        background-position: 0 0;
+        color: @color-secondary-2-1;
+
+        outline: 1px dotted #000;
+	    outline: -webkit-focus-ring-color auto 5px;
+    }
+    & + label:hover{
+        color: @color-secondary-2-1;
+        background-position: 0 0;
+    }
+    & + label * {
+        pointer-events: none;
+    }
+
+    &.has-file + label  {
+        color: #143a73;
+        background-image: linear-gradient(to bottom, #ff00a8 50%, #3b7fe6 50%);
+    }
+
+    &.has-file + label:hover{
+        color: #8c005c;
+        background-position: 0 0;
     }
 }

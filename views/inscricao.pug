@@ -1,1 +1,101 @@
-h1 inscricao
+extends layout
+
+block navbar
+    nav(class="navbar fixed-top navbar-toggleable-md navbar-inverse bg-inverse" role="navigation")
+        button(class="navbar-toggler navbar-toggler-right" type="button" 
+        data-toggle="collapse" aria-expanded="false" 
+        aria-label="Toggle navigation" aria-controls="navCollapse" data-target="#navCollapse")
+            span(class="navbar-toggler-icon")
+        div(class="collapse navbar-collapse" id="navCollapse")
+            // hidden-md-down mx-auto
+            a(class="navbar-brand ajax-load" href="/")
+                img(src="img/logo.png" width=30 alt="")
+
+block ajaxbox
+    div(class="jumbotron jumbotron-fluid section")
+        div(class="container")
+            h1(class="display-4") Inscrição
+            p(class="lead") só vem <3
+    div(class="container align-top")
+        form(id="frmInscricao")
+            p(class="h1 section") Seus dados
+            div(class="container")
+                div(class="form-group row align-items-center")
+                    label(for="nome" class="col-sm-3 col-form-label") Nome completo
+                    div(class="col-sm-9")
+                        input(type="text" class="form-control" id="nome" name="nome" placeholder="Fulano da Silva" required)
+                div(class="form-group row align-items-center")
+                    label(for="email" class="col-sm-3 col-form-label") E-mail
+                    div(class="col-sm-9")
+                        input(type="email" class="form-control" id="email" name="email" placeholder="exemplo@exemplo.com" required)
+                div(class="form-group row align-items-center")
+                    label(for="telefone1" class="col-sm-3 col-form-label") Telefone 1
+                    div(class="col-sm-9")
+                        input(type="text" class="form-control" id="telefone1" name="telefone1" placeholder="11 91234 1234" required)
+                div(class="form-group row align-items-center")
+                    label(for="telefone2" class="col-sm-3 col-form-label") Telefone 2
+                    div(class="col-sm-9")
+                        input(type="text" class="form-control" id="telefone2" name="telefone2" placeholder="11 91234 1234" required)
+                div(class="form-group row align-items-center")
+                    label(for="nasc" class="col-sm-3 col-form-label") Data de Nascimento
+                    div(class="col-sm-9")
+                        input(type="date" class="form-control" id="nasc" name="nasc" placeholder="01/01/2001" required)
+                div(class="form-group row align-items-center")
+                    label(for="cpf" class="col-sm-3 col-form-label") CPF
+                    div(class="col-sm-9")
+                        input(type="text" class="form-control" id="cpf" name="cpf" placeholder="123.456.789/00" required)
+                div(class="form-group row align-items-center")
+                    label(for="lblFoto" class="col-sm-3 col-form-label") Foto
+                    div(class="col-sm-9")
+                        input(type="file" class="form-control-file" id="foto" name="foto" aria-describedby="fileHelp")
+                        label(for="foto" id="lblFoto") Escolha um arquivo
+                    div(class="offset-sm-3 col-sm-9")
+                        small(id="fileHelp" class="form-text text-muted").
+                            Caso queira, nos mande uma foto para sua placa no evento :)
+                div(class="form-group row align-items-center")
+                    label(for="alergias" class="col-sm-3 col-form-label") Alergias e preferências alimentares
+                    div(class="col-sm-9")
+                        textarea(type="text" class="form-control" id="alergias" name="alergias" required)
+                div(class="form-group row align-items-center")
+                    label(for="cc" class="col-sm-3 col-form-label") Nome do contato de confiança
+                    div(class="col-sm-9")
+                        input(type="text" class="form-control" id="cc" name="cc" placeholder="Ciclano da Silva" aria-describedby="ccHelp" required)
+                    div(class="offset-sm-3 col-sm-9")
+                        small(id="ccHelp" class="form-text text-muted").
+                            Esta pessoa só será contatada em caso de emergência durante o evento.
+                div(class="form-group row align-items-center")
+                    label(for="emailcc" class="col-sm-3 col-form-label") E-mail do contato de confiança
+                    div(class="col-sm-9")
+                        input(type="email" class="form-control" id="emailcc" name="emailcc" placeholder="exemplo@exemplo.com" required)
+                div(class="form-group row align-items-center")
+                    label(for="telefonecc" class="col-sm-3 col-form-label") Telefone do contato de confiança
+                    div(class="col-sm-9")
+                        input(type="text" class="form-control" id="telefonecc" name="telefonecc" placeholder="11 91234 1234" required)
+            
+            p(class="h1 section") Você e o Rotary
+            div(class="container")
+                div(class="form-group row align-items-center")
+                    label(for="familia" class="col-sm-3 col-form-label") Você é
+                    div(class="col-sm-9")
+                        select(class="form-control" id="familia" required)
+                            option Interactiano
+                            option Rotakidiano
+                            option Rotaractiano
+                            option Rotariano
+                            option Outro
+                div(class="form-group row align-items-center")
+                    label(for="club" class="col-sm-3 col-form-label") Você é associado ao
+                    div(class="col-sm-9")
+                        input(type="text" class="form-control" id="club" name="club" 
+                              placeholder="Interact Club de Campinas Jovens em Ação" required)
+                div(class="form-group row align-items-center")
+                    label(for="distrito" class="col-sm-3 col-form-label") Seu Distrito é o
+                    div(class="col-sm-9")
+                        // MUDAR ISSO AQUI ------------------------------------------------------------------
+                        input(type="number" class="form-control" id="distrito" name="distrito" 
+                            placeholder="4590" required)
+                            
+            p(class="h1 section") Sua viagem
+            div(class="container")
+                ASDASDF
+            button(type="submit" class="btn btn-primary") Inscreva-me!
