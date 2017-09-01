@@ -1,0 +1,34 @@
+# Aviso de lote
+
+Informações Cadastrais
+	Nome Completo *
+	E-mail *
+	Telefone 1 *
+	Telefone 2
+	Data de Nascimento *
+	CPF *
+	Foto (para impressão na plaquinha)
+	Impossibilidades alimentares/Alergias
+	Nome de contato de confiança (para emergência) *
+	E-mail do contato de confiança *
+	Telefone do contato de confiança *
+	
+
+Informações de Interact
+	Rotariano/Rotaractiano/Interactiano/Outro *
+	Club a que é associado(a) *
+	Distrito (?) *
+	
+Informações da viagem
+	Data de chegada *
+	Meio de chegada *
+	Data de partida *
+	Meio de partida *
+	# Lembrete das autorizações
+
+Extra:
+	Sugestões à CCO
+	Observações no geral	
+
+# Ao submeter o formulário, lembrar novamente das autorizações e avisar o lote antes de confirmar a inscrição.
+# Avisar que o e-mail foi enviado e que nele estarão contidas mais informações sobre o pagamento.
