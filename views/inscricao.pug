@@ -73,6 +73,7 @@ block ajaxbox
                         div(class="col-sm-9")
                             input(type="text" class="form-control" id="telefonecc" name="telefonecc" placeholder="11 91234 1234" required)
             
+            hr
             fieldset(class="form-group")
                 legend Você e o Rotary
                 div(class="container")
@@ -96,7 +97,8 @@ block ajaxbox
                             // MUDAR ISSO AQUI ------------------------------------------------------------------
                             input(type="number" class="form-control" id="distrito" name="distrito" 
                                 placeholder="4590" required)
-                            
+                
+            hr            
             fieldset(class="form-group")
                 legend Sua viagem
                 div(class="container")
@@ -108,7 +110,7 @@ block ajaxbox
                             div(class="form-check")
                                 label(class="form-check-label")
                                     input(type="checkbox" class="form-check-input" name="nsdatachegada") 
-                                    | Não sei
+                                    |  Não sei
                     div(class="form-group row align-items-center")
                         label(for="meiochegada" class="col-sm-3 col-form-label") Meio de chegada
                         div(class="col-sm-9")
@@ -126,7 +128,7 @@ block ajaxbox
                             div(class="form-check")
                                 label(class="form-check-label")
                                     input(type="checkbox" class="form-check-input" name="nsdatapartida") 
-                                    | Não sei
+                                    |  Não sei
                     div(class="form-group row align-items-center")
                         label(for="meiopartida" class="col-sm-3 col-form-label") Meio de partida
                         div(class="col-sm-9")
@@ -147,7 +149,8 @@ block ajaxbox
                                 label(class="form-check-label")
                                     input(type="radio" class="form-check-input" name="hospedagem" value="n" required)
                                     |  Não
-                                    
+                    
+            hr                
             fieldset(class="form-group")
                 legend Sua opinião
                 div(class="container")
@@ -162,13 +165,39 @@ block ajaxbox
                     
             div(class="container")
                 div(class="form-group row align-items-center")
-                    div(class="col-sm-3 mb-3")
-                        button(type="submit" class="btn btn-primary") Inscreva-me!
-                    div(class="col-sm-9")
-                        div(class="form-check")
-                            label(class="form-check-label")
-                                input(type="checkbox" class="form-check-input" name="nsdatachegada" required) 
-                                | Declaro ter lido e estar ciente das cláusulas do 
-                                a(href="downloads/regimento.pdf") regimento interno
-                                |  do evento, comprometendo-me a zelar pelo seu cumprimento.
+                    div(class="col-sm-12")
+                        button(type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLote") Inscrever
+                        
+            div(class="modal fade" id="modalLote" tabindex="-1" role="dialog" aria-labelledby="lblModalLote")
+                div(class="modal-dialog" role="document")
+                    div(class="modal-content")
+                        div(class="modal-header")
+                            h5(id="lblModalLote" class="modal-title") Atenção!
+                            button(type="button" class="close" data-dismiss="modal" aria-label="Fechar")
+                                span(aria-hidden="true") &times;
+                        div(class="modal-body") 
+                            p
+                                | O 
+                                a(href="/#lotes" target="_blank") lote
+                                |  ao qual você será inscrito será baseado na 
+                                strong data do pagamento
+                                | , sem exceções. Programe-se para efetuá-lo dentro do prazo!
+                            p
+                                | O preenchimento deste formuário apenas garante sua pré-inscrição.
+                                | Sendo assim, só serão considerados inscritos aqueles que 
+                                | efetivarem o pagamento.
+                            p
+                                | Mediante sua pré-inscrição, enviaremos ao seu e-mail
+                                | as informações necessárias para pagamento e envio do
+                                | comprovante.
+                            hr
+                            div(class="form-check")
+                                label(class="form-check-label")
+                                    input(type="checkbox" class="form-check-input" name="nsdatachegada" required) 
+                                    | Declaro ter lido e estar ciente das cláusulas do 
+                                    a(href="downloads/regimento.pdf" target="_blank") regimento interno
+                                    |  do evento, comprometendo-me a zelar pelo seu cumprimento.
+                        div(class="modal-footer")
+                            button(type="button" class="btn btn-secondary" data-dismiss="modal") Fechar
+                            button(type="submit" class="btn btn-primary" data-dismiss="modal") Continuar
                     
