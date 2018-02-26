@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'Arvo';
+    src: url('font/Arvo-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('font/Arvo-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('font/Arvo-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Arvo';
+    src: url('font/Arvo-Bold.ttf') format('truetype');
+    font-style: italic;
+}
+
+body {
+  padding: 50px;
+  font: 14px Arvo, Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}

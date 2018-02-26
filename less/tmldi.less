@@ -1,0 +1,135 @@
+@import "variables";
+
+body {
+    font-family: "Roboto Lt", "Segoe UI";
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+section {
+    padding-top:40px;
+    margin-top: -40px;
+    
+    .section-title {
+        text-align: center;
+        @media screen and (min-width: 540px){
+            & {
+                text-align: right;
+            }
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+
+    color: @color-primary-1;
+
+    transition: color 0.25s ease;
+
+    &:hover{
+        color: @color-primary-4;
+    }
+}
+
+// .footer {
+//     background-color: #787878;
+//     height: 45px;
+//     color: white;
+//
+//     img {
+//         height: 35px;
+//         width: auto;
+//     }
+// }
+
+// PATROCINADORES
+.card.parceiro-bronze {
+    width: 14rem;
+}
+
+.badge-bronze {
+    background-color: #b77800;
+    color: #6a4600;
+}
+
+.badge-prata {
+    background-color: silver;
+    color: #848484;
+}
+
+.badge-ouro {
+    background-color: #ffc400;
+    color: #795d00;
+}
+
+div.wallpaper {
+    margin: 0 0 0 0;
+    background: url('../img/campinas4novo.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+div#bemvindo {
+    height: 100%;
+    font-size: 80px;
+    color: red;
+}
+
+fieldset.form-group {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    legend {
+        font-size: 40px;
+    }
+}
+
+// FORMS
+.form-control-file {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+
+    & + label {
+        border-radius: 15px;
+        padding: 5px 10px 5px 10px;
+        font-size: 1.25em;
+        font-weight: 700;
+        color: @color-primary-1;
+
+        background-size: 100% 200%;
+        background-position: 0 -100%;
+        transition: background 0.5s, color 0.5s;
+        background-image: linear-gradient(to bottom, @color-primary-2 50%, @color-primary-0 50%);
+
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    &:focus + label {
+        background-position: 0 0;
+        color: @color-primary-2;
+
+        outline: 1px dotted #000;
+	    outline: -webkit-focus-ring-color auto 5px;
+    }
+    & + label:hover{
+        color: @color-primary-2;
+        background-position: 0 0;
+    }
+    & + label * {
+        pointer-events: none;
+    }
+
+    &.has-file + label  {
+        color: #143a73;
+        background-image: linear-gradient(to bottom, #ff00a8 50%, #3b7fe6 50%);
+    }
+
+    &.has-file + label:hover{
+        color: #8c005c;
+        background-position: 0 0;
+    }
+}
